@@ -7,9 +7,10 @@
 
 int main(void)
 {
-	char c = 'a';
-	int a;
-	for (a = 0; a <= 26; a++)
-		putchar(c + a);
+	char c ;
+	
+	for (c = 0; c <= 26; a++)
+		putchar(c);
+	putchar('\n');
 	return (0);
 }
