@@ -12,10 +12,12 @@ void print_to_98(int n)
 {
 	int x;
 
-	for (x = n; x <= n; x++)
+	for (x = n; x < n; x++)
 	{
-		_putchar(x);
+		_putchar('$x');
 		_putchar(',');
 		_putchar(' ');
 	}
+	putchar('98');
+	return ;
 }
