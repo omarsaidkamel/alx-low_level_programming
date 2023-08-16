@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_to_98 - Check Holberton
@@ -7,17 +8,30 @@
  * from n to 98, followed by a new line.
  * Return: Nothing
  */
-
 void print_to_98(int n)
 {
-	int x;
-
-	for (x = n; x < n; x++)
+	if (n <= 98)
 	{
-		_putchar('$x');
-		_putchar(',');
-		_putchar(' ');
+		for (; n <= 98; n++)
+		{
+			printf("%d", n);
+
+			if (n == 98)
+				continue;
+			printf(", ");
+		}
+		printf("\n");
 	}
-	putchar('98');
-	return ;
+	else
+	{
+		for (; n >= 98; n--)
+		{
+			printf("%d", n);
+
+			if (n == 98)
+				continue;
+			printf(", ");
+		}
+		printf("\n");
+	}
 }
