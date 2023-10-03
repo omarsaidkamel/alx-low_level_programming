@@ -9,7 +9,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int x, l = 0;
+	int x, y, l = 0;
 
 	if (filename == NULL)
 		return (-1);
@@ -19,7 +19,9 @@ int create_file(const char *filename, char *text_content)
 	while (text_content && *(text_content + l))
 		l++;
 	
-	if (write(x, text_content, l) == -1)
+	y = write(x, text_content, l);
+	close(x);
+	if (y == -1)
 		return (-1);
 	return (1);
 }
