@@ -9,12 +9,18 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int x;
+	int x, y, l;
 
 	if (filename == NULL)
 		return (-1);
 	x = open(filename, O_RDWR | O_CREAT, 0600);
-	if (write(x, text_content, sizeof(text_content) - 1) == -1)
+	
+	while (text_content && *(text_content + len))
+		l++;
+
+	y = write(fdo, text_content, len);
+	
+	if (write(x, text_content, l) == -1)
 		return (-1);
 	return (1);
 }
