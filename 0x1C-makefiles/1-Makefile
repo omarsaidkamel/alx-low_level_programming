@@ -1,0 +1,4 @@
+CC = gcc
+SRC = main.c omar.c
+all: $(SRC)
+	$(CC) $(SRC) -o omar
